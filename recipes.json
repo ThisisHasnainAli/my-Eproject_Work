@@ -1,0 +1,38 @@
+[
+    {
+        "id": "banana-protein-smoothie",
+        "title": "Banana Protein Smoothie",
+        "description": "Creamy and packed with protein for a post-workout boost.",
+        "videos": [
+            "https://www.youtube.com/embed/VIDEO_ID1",
+            "https://www.youtube.com/embed/VIDEO_ID2"
+        ]
+    },
+    {
+        "id": "chocolate-protein-smoothie",
+        "title": "Chocolate Protein Smoothie",
+        "description": "Rich chocolate flavor with a protein punch.",
+        "videos": [
+            "https://www.youtube.com/embed/VIDEO_ID3",
+            "https://www.youtube.com/embed/VIDEO_ID4"
+        ]
+    },
+    {
+        "id": "berry-protein-smoothie",
+        "title": "Berry Protein Smoothie",
+        "description": "Mixed berries blended with protein for a refreshing treat.",
+        "videos": [
+            "https://www.youtube.com/embed/VIDEO_ID5",
+            "https://www.youtube.com/embed/VIDEO_ID6"
+        ]
+    },
+    {
+        "id": "peanut-butter-protein-smoothie",
+        "title": "Peanut Butter Protein Smoothie",
+        "description": "Nutty, creamy, and protein-packed.",
+        "videos": [
+            "https://www.youtube.com/embed/VIDEO_ID7",
+            "https://www.youtube.com/embed/VIDEO_ID8"
+        ]
+    }
+]

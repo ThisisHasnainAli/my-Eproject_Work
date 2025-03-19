@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Quick Snacks for Kids</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style> 
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* :root {
+    --primary-color: #ff4081;
+    --dark-bg: #000000;
+    --light-text: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --primary-color: #c5226e;
+    --dark-bg: #000000;
+    --light-text: #ffffff;
+    --secondary-text: #cccccc;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    font-family: poppin;
+}
+/* General Navbar Styles */
+.navbar {
+    
+    padding: 1rem 2rem;
+    background: linear-gradient(to right,#020202,#5a004b,#180e18, #5a004b, #251323,#5a004b,#251323, #000000);
+}
+
+.navbar-brand {
+    color: var(--light-text) !important;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-brand i {
+    color: var(--light-text) !important;
+    font-size: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: var(--light-text) !important;
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+    background-color: black !important;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 0;
+}
+
+.dropdown-item {
+    color: var(--primary-color) !important;
+    padding: 0.8rem 1.2rem;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #222 !important;
+    padding-left: 1.5rem;
+}
+
+/* Sub-dropdown Styles */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: 0;
+    background-color: black !important;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu > a::after {
+    content: "▶";
+    font-size: 0.8rem;
+    float: right;
+}
+
+/* Mobile Menu */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+   
+/* FAQ Section */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-content {
+    width: 55%;
+}
+
+.accordion-item {
+    background-color: #111;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.accordion-button {
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #ff9b3e;
+    color: black;
+}
+
+.accordion-body {
+    background-color: #333;
+    color: white;
+}
+
+
+
+/* Floating Image Animation - Up, Down, Left, Right & Circular Motion */
+
+.floating-img {
+    width: 450px; /* Increased from 180px */
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    right: 5%;
+    top: 35%; /* Start from the middle */
+    transform: translateY(-50%);
+    animation: floatCircular 6s infinite ease-in-out;
+}
+
+
+/* Up, Down, Left, Right & Circular Motion Animation */
+@keyframes floatCircular {
+    0% {
+        transform: translate(0px, -50%) rotate(0deg);
+    }
+    25% {
+        transform: translate(10px, -40%) rotate(10deg);
+    }
+    50% {
+        transform: translate(-10px, -30%) rotate(0deg);
+    }
+    75% {
+        transform: translate(10px, -40%) rotate(-10deg);
+    }
+    100% {
+        transform: translate(0px, -50%) rotate(0deg);
+    }
+}
+footer {
+    background: linear-gradient(to right,#020202,#5a004b,#180e18, #5a004b, #251323,#5a004b,#251323, #000000);
+    color: var(--light-text);
+    padding: 40px 20px;
+    font-size: 14px;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* Footer Sections */
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    color: var(--light-text);
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+/* Hover Effect for Links */
+.footer-section ul li a {
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--primary-color) !important;
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-media {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social-media a {
+    color: var(--light-text);
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect for Social Media */
+.social-media a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid var(--light-text);
+    padding-top: 10px;
+}
+
+.footer-bottom i {
+    color: var(--primary-color);
+}
+.blur-typewriter {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: poppin;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    filter: blur(5px);
+    animation: blurTyping 3s steps(20, end) forwards, focusText 3s forwards;
+}
+
+@keyframes blurTyping {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes focusText {
+    100% { filter: blur(0); }
+}
+.blur-typewriter span {
+    color: yellow;
+
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: black;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="fas fa-utensils me-2"></i> QuickSnacks
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+    
+                        <!-- Categories Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Categories</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Healthy Snacks</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="vegan.html">Vegan Snacks</a></li>
+                                        <li><a class="dropdown-item" href="protein.html">High Protein Snacks</a></li>
+                                        <li><a class="dropdown-item" href="lowcarb.html">Low Carb Snacks</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="kids.html">Snack for Kids</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="Fun.html">Fun and Creative Snacks</a></li>
+                                        <li><a class="dropdown-item" href="Nut-Free.html">Nut-Free Snacks</a></li>
+                                        <li><a class="dropdown-item" href="Easy-to-Make.html">Easy-to-Make Snacks</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="easy.html">Easy on Stomach Snacks</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="Mild Flavors.html">Mild Flavors Snacks</a></li>
+                                        <li><a class="dropdown-item" href="Easy-to-Digest.html">Easy-to-Digest Snacks</a></li>
+                                        <li><a class="dropdown-item" href="Soft Snacks.html">Soft Snacks</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+    
+                        <!-- Smoothies Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="smoothiesDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Smoothies</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="Protein Smoothies.html">Protein Smoothies</a></li>
+                                <li><a class="dropdown-item" href="Green Smoothies.html">Green Smoothies</a></li>
+                                <li><a class="dropdown-item" href="Fruit Smoothies.html">Fruit Smoothies</a></li>
+                            </ul>
+                        </li>
+    
+                        <li class="nav-item"><a class="nav-link" href="About.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Review.html">Review</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Faqs.html">Faqs</a></li>
+                            <li class="nav-item"><a class="nav-link" href="signup.html">Sign Up</a></li>
+                            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- FAQ Section -->
+    <div class="container mt-5 py-5">
+        <!-- FAQ Left Section -->
+        <div class="faq-content mt-5">
+            <h1 class="blur-typewriter"><span>FREQUENTLY</span>ASKED<span>QUESTIONS</span></h1>
+
+            <!-- <h2 class="text-light">Frequently Asked Questions</h2> -->
+            <p class="text-secondary">Find answers to common questions about quick snacks for kids.</p>
+            <div class="accordion mt-4" id="faqAccordion">
+                <!-- FAQs will be dynamically added here -->
+            </div>
+        </div>
+
+        <!-- Floating Images Section -->
+        <div class="floating-images">
+            <img src="images/faq4-removebg-preview (1).png" alt="Snack 1" class="floating-img img1">
+            <!-- <img src="images/faq11-removebg-preview.png" alt="Snack 2" class="floating-img img2">
+            <img src="images/faq7-removebg-preview.png" alt="Snack 3" class="floating-img img3"> -->
+        </div>
+    </div>
+
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <!-- About Us Section -->
+                <div class="col-md-3">
+                    <h5>About Us</h5>
+                    <p>
+                        QuickSnacks is dedicated to bringing you delicious and healthy snack options. 
+                        Discover fresh flavors and nutritious choices for every craving.
+                    </p>
+                </div>
+    
+                <!-- Contact Section -->
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Snack Street, Food City, FC 98765</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> support@quicksnacks.com</p>
+                </div>
+    
+                <!-- Quick Links Section -->
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="about.html" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="contact.html" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-light text-decoration-none">FAQs</a></li>
+                        <li><a href="gallery.html" class="text-light text-decoration-none">Gallery</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Social Media Section -->
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div>
+                        <a href="https://facebook.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-facebook-square fa-lg"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="text-light me-3">
+                            <i class="fab fa-twitter-square fa-lg"></i>
+                        </a>
+                        <a href="https://pinterest.com" target="_blank" class="text-light">
+                            <i class="fab fa-pinterest-square fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Footer Bottom -->
+            <div class="text-center mt-3">
+                <p>&copy; 2025 QuickSnacks | Designed with <i class="fas fa-heart text-danger"></i> by QuickSnacks Team</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap & JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const faqData = [
+        {
+            question: "What are some healthy quick snacks for kids?",
+            answer: "Some healthy quick snacks include fruit slices, yogurt with granola, peanut butter toast, cheese sticks, and homemade smoothies."
+        },
+        {
+            question: "How can I make snacks fun for kids?",
+            answer: "Use cookie cutters to shape sandwiches, arrange food in fun patterns, or create snack boards with different colors and textures."
+        },
+        {
+            question: "Are there any no-cook snack ideas?",
+            answer: "Yes! Try apple slices with peanut butter, hummus with veggie sticks, cheese and crackers, or a simple yogurt parfait with fruit."
+        },
+        {
+            question: "How can I get my child to eat more vegetables?",
+            answer: "Offer veggies with dips like hummus or ranch, add them to smoothies, or mix them into favorite foods like pasta or sandwiches."
+        },
+        {
+            question: "What are some nut-free snack ideas for school?",
+            answer: "Nut-free snacks include cheese cubes, popcorn, veggie sticks, seed butter with crackers, and homemade energy balls with oats."
+        }
+    ];
+
+    const faqAccordion = document.getElementById("faqAccordion");
+
+    faqData.forEach((faq, index) => {
+        const faqItem = `
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading${index}">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="false" aria-controls="collapse${index}">
+                        ${faq.question}
+                    </button>
+                </h2>
+                <div id="collapse${index}" class="accordion-collapse collapse" aria-labelledby="heading${index}" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">${faq.answer}</div>
+                </div>
+            </div>
+        `;
+        faqAccordion.innerHTML += faqItem;
+    });
+});
+
+    </script>
+
+</body>
+</html>
